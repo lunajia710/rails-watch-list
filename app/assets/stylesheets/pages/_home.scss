@@ -8,7 +8,6 @@
 
   h1 {
     font-family: $headers-font;
-    font-weight: 700;
   }
 }
 
@@ -51,12 +50,10 @@
 .list-card-name {
   color: white;
   font-family: $headers-font;
-  font-weight: 700;
 }
 
 .list-link{
   color: white;
-  font-weight: 700;
   text-decoration: none;
 
   &:hover {
