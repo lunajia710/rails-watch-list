@@ -1,6 +1,10 @@
-<h1>Add a new list</h1>
-<%= simple_form_for @list do |f| %>
-  <%= f.input :name %>
-  <%= f.button :submit %>
-<% end %>
-<%= link_to "Cancle", lists_path %>
+<div class="container bg-secondary mx-auto p-4">
+  <h1>Add a new list</h1>
+  <%= simple_form_for @list do |f| %>
+    <%= f.input :name %>
+    <%= f.button :submit, class: "btn btn-success" %>
+  <% end %>
+  <div class="d-flex justify-content-end m-4">
+    <%= link_to "Cancle", lists_path, class: "btn btn-info" %>
+  </div>
+</div>
