@@ -5,22 +5,16 @@
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
   min-height: 280px;
-
-  @media (max-width: 576px) {
-    flex-direction: column;
-  }
 }
 
+
 .movie-card-poster {
-  flex: 0 0 35%;
+  flex: 0 0 40%;
   background: $yellow;
 
-  @media (max-width: 576px) {
-    flex: 0 0 auto;
-    height: 220px;
-  }
 
   img {
+    display:block;
     width: 100%;
     height: 100%;
     object-fit: cover;
