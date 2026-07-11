@@ -1,13 +1,28 @@
 // Specific CSS for your home-page
 .banner {
+  position: relative;
   background-size: cover;
   background-position: center;
   color: white;
   padding: 5rem 1rem;
   margin-bottom: 2rem;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+  }
 
   h1 {
     font-family: $headers-font;
+    font-weight: 700;
   }
 }
 
