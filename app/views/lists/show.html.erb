@@ -1,5 +1,5 @@
 <% if @list.photo.attached? %>
-   <%= @banner_image = cl_image_tag list.photo.key, alt: list.name %>
+   <%= @banner_image = cl_image_tag @list.photo.key, alt: @list.name %>
 <% else %>
   <% @banner_image = list_cover_image(@list) %>
 <% end %>
