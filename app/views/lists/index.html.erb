@@ -9,7 +9,11 @@
     <% @lists.each do |list| %>
     <div class="col">
       <div class="list-card m-4">
-        <%= image_tag list_cover_image(list), class: "list-card-img"%>
+        <% if list.photo.attached? %>
+            <%= cl_image_tag list.photo.key, alt: list.name %>
+        <% else %>
+          <%= image_tag list_cover_image(list), class: "list-card-img"%>
+        <% end %>
         <div class="list-card-overlay">
           <h5 class="list-card-name"><%= link_to list.name, list_path(list), class: "list-link" %></h5>
           <h5 class="list-card-name">(<%= list.movies.count %>)</h5>
